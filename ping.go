@@ -50,9 +50,10 @@ func bot() {
 	// }
 
 	// // Markdown 消息
+	content := "# " + os.Args[1] + "ping通了"
 
 	markdown := wxworkbot.Markdown{
-		Content: "# 可以ping通192.168.201.73地址了",
+		Content: content,
 	}
 	err := bot.Send(markdown)
 	if err != nil {
